@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20131206201515) do
   add_index "line_items", ["user_id"], name: "index_line_items_on_user_id"
 
   create_table "orders", force: true do |t|
-    t.decimal "total_price"
+    t.decimal "total_price", precision: 8, scale: 2
   end
 
   create_table "products", force: true do |t|

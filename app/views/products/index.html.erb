@@ -1,5 +1,5 @@
 <% @products.each do |product| %>
-<div><%= product.name %></div>
+<div><%= link_to product.name, product %></div>
 <div><%= product.description %></div>
 <div><%= product.price %></div>
 <div><%= image_tag product.images %></div>

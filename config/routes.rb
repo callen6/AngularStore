@@ -5,6 +5,7 @@ RobynStore::Application.routes.draw do
   get '/products/:id', to:'products#show', as: 'product'
   post '/products/add_to_cart', to: 'line_items#create', as: 'new_line_item'
   get '/cart', to: 'line_items#index', as: 'cart'
+  delete '/cart', to: 'line_items#delete', as: 'remove_item_from_cart'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

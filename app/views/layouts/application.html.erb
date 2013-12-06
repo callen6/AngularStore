@@ -15,14 +15,14 @@
   <nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#">Cobrastyle</a></h1>
+      <h1><a href="#"><%= link_to "Cobrastyle", root_url %></a></h1>
     </li>
   </ul>
 
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="active"><a href="#"><%= link_to "My Shopping Cart", root_url %></a></li>
+      <li class="active"><a href="#"><%= link_to "My Shopping Cart", cart_url %></a></li>
     <% if user_signed_in? %>
     <li class="has-dropdown">
       <a href="#">Logged in as <strong><%= current_user.email %></strong>.</a>

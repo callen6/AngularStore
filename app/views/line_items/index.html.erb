@@ -1,4 +1,5 @@
 Items in your cart:
 <% @line_items.each do |item| %>
-<p><%= item.product_id %><p>
+<div><%= item.product_id%></div>
+<div><%= button_to "Remove From Cart", remove_item_from_cart_path(line_item_id: item), method: :delete, class: "button tiny" %> </div>
 <% end %>

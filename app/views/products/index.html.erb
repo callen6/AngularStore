@@ -1,6 +1,28 @@
-<% @products.each do |product| %>
-<div><%= link_to product.name, product %></div>
-<div><%= product.description %></div>
-<div><%= product.price %></div>
-<div><%= image_tag product.images %></div>
-<% end %>
+<div class="row">
+<div class="small-8 columns">
+	<% @products.each do |product| %>
+	<div><%= link_to product.name, product %></div>
+	<div><%= product.description %></div>
+	<div><%= product.price %></div>
+	<div><%= link_to product_path(id: product.id) do %>
+					<%= image_tag (product.images) %>
+				<% end %>
+	</div>
+	<% end %>
+</div>
+
+
+<div class="small-4 columns">
+	<% @products.each do |product| %>
+	<% if product.id == 3 %>
+	<div><%= link_to product.name, product %></div>
+	<div><%= product.description %></div>
+	<div><%= product.price %></div>
+	<div><%= link_to product_path(id: product.id) do %>
+					<%= image_tag (product.images) %>
+				<% end %>
+	</div>
+	<% end %>
+	<% end %>
+</div>
+</div>

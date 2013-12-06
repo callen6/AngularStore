@@ -1,6 +1,6 @@
 <% @products.each do |product| %>
-<%= product.name %>
-<%= product.description %>
-<%= product.price %>
-<%= image_tag product.images %>
+<div><%= product.name %></div>
+<div><%= product.description %></div>
+<div><%= product.price %></div>
+<div><%= image_tag product.images %></div>
 <% end %>

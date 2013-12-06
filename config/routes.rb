@@ -1,5 +1,6 @@
 RobynStore::Application.routes.draw do
   
+  devise_for :users
   root 'products#index'
 
   # Example of regular route:

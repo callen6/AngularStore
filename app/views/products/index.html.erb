@@ -14,7 +14,6 @@
 
 <div class="small-4 columns">
 	<% @products.each do |product| %>
-	<% if product.id == 3 %>
 	<div><%= link_to product.name, product %></div>
 	<div><%= product.description %></div>
 	<div><%= product.price %></div>
@@ -22,7 +21,6 @@
 					<%= image_tag (product.images) %>
 				<% end %>
 	</div>
-	<% end %>
 	<% end %>
 </div>
 </div>
